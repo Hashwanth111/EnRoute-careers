@@ -1,0 +1,467 @@
+:root {
+  --primary-bg: rgba(237, 203, 190, 0.2);
+  --accent-color: #EC9383;
+  --dark-accent: #d87c6b;
+  --text-color: #2d2d2d;
+  --light-gray: #f8f9fa;
+  --border-radius: 16px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fefefe;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.Nav-Main {
+  background-color: var(--primary-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.Nav-Main-wrap {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.Nav-image-div {
+  width: 10%;
+}
+
+#enroutelogo {
+  flex-shrink: 1;
+  object-fit: cover;
+  transition: var(--transition);
+  width: 100%;
+}
+
+#enroutelogo:hover {
+  filter: drop-shadow(0 2px 4px rgba(236, 147, 131, 0.3));
+  transform: scale(1.03);
+}
+
+.Nav-ul {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav-ul-lis {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  list-style: none;
+}
+
+.Nav-ul-lis-a {
+  align-items: center;
+  border-radius: 12px;
+  color: #555;
+  display: flex;
+  font-size: 0.95rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.Nav-ul-lis-a:hover {
+  background-color: rgba(236, 147, 131, 0.15);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.Nav-search-dummy-div {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 30%;
+}
+
+.wrap-span-lense {
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1.2rem;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.wrap-span-lense:hover {
+  border-color: rgba(236, 147, 131, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wrap-span-lense span {
+  color: #666;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.m {
+  align-items: center;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: var(--transition);
+  width: 36px;
+}
+
+.m:hover {
+  background-color: var(--dark-accent);
+  transform: scale(1.05);
+}
+
+.Nav-profile-bell-div {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+  justify-content: space-between;
+  width: auto;
+}
+
+#bell {
+  color: #666;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-right: 1.5rem;
+  transition: var(--transition);
+}
+
+#bell:hover {
+  animation: bellRing 0.5s ease-in-out;
+  color: var(--accent-color);
+}
+
+@keyframes bellRing {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.Nav-image-span-div {
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  padding: 0.5rem 0.8rem;
+  transition: var(--transition);
+  width: 180px;
+}
+
+.Nav-image-span-div:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(236, 147, 131, 0.15);
+}
+
+.Nav-profile-div {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-around;
+}
+
+.span {
+  border: 2px solid #888;
+  border-radius: 4px;
+  display: block;
+  width: 40px;
+}
+
+.Nav-profile-span3 {
+  width: 30px;
+}
+
+#navimg {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+}
+
+/* Main Content */
+.Main-div {
+  align-items: flex-start;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1400px;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.uls {
+  align-items: center;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 82vh;
+  list-style: none;
+  overflow-y: scroll;
+  padding: 2rem;
+  transition: var(--transition);
+  width: 45%;
+}
+
+.uls:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.uls h2 {
+  border-bottom: 3px solid var(--accent-color);
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.Reset {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: var(--transition);
+  width: auto;
+}
+
+.Reset:hover {
+  background-color: var(--dark-accent);
+  transform: translateY(-2px);
+}
+
+/* Job Cards */
+.job-listing-wrap {
+  align-items: center;
+  background: white;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.job-listing-wrap:hover {
+  border-color: rgba(236, 147, 131, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.job-listing-image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 15%;
+}
+
+#companyimg {
+  border-radius: 8px;
+  max-width: 80px;
+  width: 100%;
+}
+
+.job-listing {
+  width: 85%;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.company-info {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.company-name {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+.separator {
+  color: #5f6368;
+  margin: 0 0.5rem;
+}
+
+.location {
+  color: #5f6368;
+}
+
+.alumni-badge {
+  background-color: #f1f3f4;
+  border-radius: 16px;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.promoted-tag {
+  color: #5f6368;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .Nav-ul {
+    gap: 1rem;
+    width: 40%;
+  }
+  
+  .Nav-search-dummy-div {
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .Nav-Main-wrap {
+    padding: 0 1.5rem;
+  }
+  
+  .Nav-ul {
+    display: none;
+  }
+  
+  .Nav-search-dummy-div {
+    width: 50%;
+  }
+  
+  .Main-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .uls {
+    width: 80%;
+    height: auto;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .Nav-Main-wrap {
+    padding: 0 1rem;
+  }
+  
+  .Nav-search-dummy-div {
+    width: 60%;
+  }
+  
+  .Nav-image-span-div {
+    width: 150px;
+  }
+  
+  .uls {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .job-listing-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .job-listing-image {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .job-listing {
+    width: 100%;
+  }
+  
+  .company-info {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .Nav-search-dummy-div {
+    display: none;
+  }
+  
+  .Nav-profile-bell-div {
+    gap: 1rem;
+  }
+  
+  .Nav-image-span-div {
+    width: auto;
+    padding: 0.5rem;
+  }
+  
+  .Nav-profile-div {
+    display: none;
+  }
+  
+  .uls {
+    padding: 1rem;
+  }
+  
+  .Reset {
+    padding: 0.5rem 1rem;
+  }
+}

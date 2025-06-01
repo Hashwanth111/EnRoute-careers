@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnRoute - Career Community</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="Nav">
+        <div class="logo">
+            <img src="assets/En.png" class="logoimg" alt="EnRoute Logo">
+        </div>
+        <ul class="list">
+            <li id="Community" onmouseenter="enter('Community')" onmouseleave="leave('Community')">Community</li>
+            <li onmouseenter="enter('Jobs')" onmouseleave="leave('Jobs')">Jobs</li>
+            <li onmouseenter="enter('Companies')" onmouseleave="leave('Companies')">Companies</li>
+            <li onmouseenter="enter('Salary')" onmouseleave="leave('Salary')">Salary</li>
+        </ul>
+        <div class="signbtn">
+            <button id="btn" class="btn" onclick="login()">Sign In</button>
+        </div>
+    </nav>
+
+    <!-- Enhanced Dropdowns -->
+    <div class="dropdown Community-div" id="Community-div">
+        <div class="dropdown-content">
+            <h3>Your work people are here</h3>
+            <p>Connect anonymously with professionals about work, pay, life and more.</p>
+            <button class="Dbtn">Start Using EnRoute</button>
+        </div>
+        <div class="dropdown-image">
+            <img src="https://via.placeholder.com/300x200" alt="Community Illustration">
+        </div>
+    </div>
+    <div class="dropdown Jobs-div" id="Jobs-div">
+        <div class="dropdown-content">
+            <h3>Find the right job</h3>
+            <p>Millions of jobs. Search by what matters to you and find the one that's right for you.</p>
+            <button class="Dbtn">Start Using EnRoute</button>
+        </div>
+        <div class="dropdown-image">
+            <img src="https://via.placeholder.com/300x200" alt="Jobs Illustration">
+        </div>
+    </div>
+    <div class="dropdown Companies-div" id="Companies-div">
+        <div class="dropdown-content">
+            <h3>Read millions of reviews</h3>
+            <p>Read anonymous reviews on over 600,000 companies worldwide from the people that work there.</p>
+            <button class="Dbtn">Start Using EnRoute</button>
+        </div>
+        <div class="dropdown-image">
+            <img src="https://via.placeholder.com/300x200" alt="Companies Illustration">
+        </div>
+    </div>
+    <div class="dropdown Salary-div" id="Salary-div">
+        <div class="dropdown-content">
+            <h3>Compare salaries</h3>
+            <p>Are you paid fairly? Get a free, personalised salary estimate and compare with millions of salaries.</p>
+            <button class="Dbtn">Start Using EnRoute</button>
+        </div>
+        <div class="dropdown-image">
+            <img src="https://via.placeholder.com/300x200" alt="Salary Illustration">
+        </div>
+    </div>
+
+    <!-- Enhanced Auth Forms -->
+    <div class="auth-container">
+        <div class="auth-card" id="btndivR">
+            <h2>Join EnRoute</h2>
+            <div class="auth-options">
+                <label class="auth-option" id="newuser" onclick="login()">
+                    <i class="fas fa-sign-in-alt option-icon"></i>
+                    <span>Already a User? Sign-in Here</span>
+                </label>
+                <label class="auth-option" onclick="Active()">
+                    <i class="fas fa-user-plus option-icon"></i>
+                    <span>New User? Create Account</span>
+                </label>
+            </div>
+            <div class="auth-form">
+                <input type="email" id="Remail" class="auth-input" placeholder="Enter your Email here..">
+                <input type="password" id="password" class="auth-input" placeholder="Enter your password Here..">
+                <button class="auth-btn" id="Continue" onclick="SaveReg()">Sign Up</button>
+                <div class="error-message" id="errorText"></div>
+            </div>
+            <div class="form-footer">
+                By joining, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="auth-card" id="btndivL">
+            <h2>Welcome Back</h2>
+            <div class="auth-form">
+                <input type="email" id="loginemail" class="auth-input" placeholder="Enter your Email here..">
+                <input type="password" id="loginpassword" class="auth-input" placeholder="Enter your password Here..">
+                <div class="error-message" id="errormessage"></div>
+                <button class="auth-btn" id="EnRoute" onclick="Signin()">Sign In</button>
+            </div>
+            <div class="form-footer">
+                Don't have an account? <a href="#" onclick="toggleAuth()">Sign up</a>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

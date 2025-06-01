@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnRoute - Profile Setup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="sideuldiv">
+        <ul class="sideul">
+            <li class="sideli active"><img src="../assets/En.png" alt="EnRoute Logo" class="sideliimg"></li>
+            <li class="sideli" onclick="opens()"><i class="fas fa-user-edit sideliimg"></i>Content</li>
+            <li class="sideli"><i class="fas fa-palette sideliimg"></i>Customize</li>
+            <li class="sideli"><i class="fas fa-share-alt sideliimg"></i>Links</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="cardDiv" id="cardDiv" onclick="opens()">
+            <div class="card">
+                <ul class="left">
+                    <li class="leftli">Your Profile</li>
+                    <li class="leftli"><i class="fa-solid fa-envelope"></i>Email</li>
+                    <li class="leftli"><i class="fa-solid fa-phone-volume"></i>Phone</li>
+                    <li class="leftli"><i class="fa-solid fa-location-dot"></i>Address</li>
+                </ul>
+                <div class="right">
+                    <img id="previewImage" class="image-preview" alt="Profile preview">
+                    <img src="../assets/camera.png" alt="Camera icon" class="rightdivimg">
+                </div>
+            </div>
+            <h2>Add Some Content Above</h2>
+            <button class="addcontentbtn" onclick="opens()">Add content</button>
+        </div>
+        <div id="deatilsForm">
+            <h2>Edit Personal Details</h2>
+
+            <!-- Add this pagination progress right after the h2 -->
+            <div class="pagination-progress">
+                <div class="step active" data-step="1">Basic Info</div>
+                <div class="step" data-step="2">Education</div>
+                <div class="step" data-step="3">Skills</div>
+                <div class="step" data-step="4">Contact</div>
+            </div>
+
+            <!-- Step 1 Container - wrap your basic info fields -->
+            <div class="form-step active" data-step="1">
+                <div class="form-group">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" class="form-input" required
+                        placeholder="Enter your title, first- and last name">
+                </div>
+                <div class="form-group">
+                    <label for="userimage">Upload your image <span class="recommended">(recommended)</span></label>
+                    <input type="file" id="userimage" accept="image/*" onchange="previewImage(this)">
+                </div>
+            </div>
+
+            <!-- Step 2 Container - education field -->
+            <div class="form-step" data-step="2">
+                <div class="form-group">
+                    <label for="job-title">College Name <span class="recommended">(recommended)</span></label>
+                    <input type="text" id="job-title" class="form-input" placeholder="Enter your college name">
+                </div>
+            </div>
+
+            <!-- Step 3 Container - skills fields -->
+            <div class="form-step" data-step="3">
+                <div class="form-group">
+                    <label for="Skills">Skills <span class="recommended">(recommended)</span></label>
+                    <input type="text" id="Skills" class="form-input"
+                        placeholder="Please enter skills separated by commas">
+                </div>
+                <div class="form-group">
+                    <label for="reqSkills">Skills you want to learn <span
+                            class="recommended">(recommended)</span></label>
+                    <input type="text" id="reqSkills" class="form-input" placeholder="Enter skills you want to learn">
+                </div>
+            </div>
+
+            <!-- Step 4 Container - contact fields -->
+            <div class="form-step" data-step="4">
+                <div class="form-group">
+                    <label for="email">Email <span class="recommended">(recommended)</span></label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="locations">Location <span class="recommended">(recommended)</span></label>
+                    <input type="text" id="locations" class="form-input" placeholder="City, Country">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone <span class="recommended">(recommended)</span></label>
+                    <input type="tel" id="phone" class="form-input" placeholder="Enter phone number">
+                </div>
+            </div>
+
+            <!-- Replace your current form-actions with this navigation -->
+            <div class="form-navigation">
+                <button type="button" class="nav-btn prev-btn" disabled>Previous</button>
+                <button type="button" class="nav-btn next-btn">Next</button>
+                <button class="save-btn" type="button" onclick="saveChanges()" style="display: none;">Save
+                    Changes</button>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>

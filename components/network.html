@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Network</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="network.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- nav1-start -->
+    <nav class="Nav-Main container-fluid ">
+        <div class="Nav-Main-wrap container-fluid">
+            <div class="Nav-image-div">
+                <img src="../assets/En.png" id="enroutelogo" alt="">
+            </div>
+            <ul class="Nav-ul" id="Nav-ul">
+            </ul>
+            <div class="Nav-search-dummy-div" id="search">
+                <div class="wrap-span-lense">
+                    <span>Search jobs here</span>
+                    <i class="fa-solid fa-magnifying-glass m"></i>
+                </div>
+            </div>
+            <div class="Nav-profile-bell-div">
+                <i class="fa-regular fa-bell fa-2x" id="bell"></i>
+                <div class="Nav-image-span-div">
+                    <div class="Nav-profile-div">
+                        <span class="Nav-profile-span1 span"></span>
+                        <span class="Nav-profile-span2 span"></span>
+                        <span class="Nav-profile-span3 span"></span>
+                    </div>
+                    <img src="" alt="Profile-image" id="navimg">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav1-end -->
+    <!--Main---Div-->
+    <div class="main-div" id="main-div">
+        <h3 class="underline">People you may know based on your recent activity</h3>
+        <div class="networkdiv" id="networkdiv">
+        </div>
+        <button onclick="prev()" class="btn">Prev</button>
+        <button onclick="next()" class="btn">Next</button>
+        <h3 class="underline">People Matches Your skills too</h3>
+        <div class="matching" id="matching">
+        </div>
+        <h3 class="underline">People Near by You</h3>
+        <div class="matchingloc" id="matchingloc">
+        </div>
+        <h3 class="underline">Connect to this people to upskill</h3>
+        <div class="upskill" id="upskill">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="./network.js"></script>
+    <script src="all.js"></script>
+</body>
+
+</html>
