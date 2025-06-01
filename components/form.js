@@ -112,14 +112,10 @@ function goToPrevStep() {
         showStep(currentStep - 1);
     }
 }
-// Load existing data if available
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Your existing DOMContentLoaded code
-    
-    // Add these new event listeners
     nextBtn.addEventListener('click', goToNextStep);
     prevBtn.addEventListener('click', goToPrevStep);
-    
     progressSteps.forEach(step => {
         step.addEventListener('click', function() {
             const stepNumber = parseInt(this.getAttribute('data-step'));
@@ -128,7 +124,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Initialize
     showStep(1);
 });

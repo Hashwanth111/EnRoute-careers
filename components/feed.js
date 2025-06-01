@@ -1000,7 +1000,6 @@ feed.map((i) => {
                 </li>`
 });
 
-// Use these reliable placeholder images
 const ads = [
   {
     img: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
@@ -1019,8 +1018,6 @@ const adsContainer = document.getElementById("Main-Div-Ads");
 
 function showAd() {
   const ad = ads[currentAdIndex];
-  
-  // Create new image element to handle loading
   const img = new Image();
   img.src = ad.img;
   img.className = "rounded-3";
@@ -1070,7 +1067,6 @@ function showAd() {
 // Start rotation (3 seconds)
 const adInterval = setInterval(showAd, 3000);
 
-// Show first ad immediately
 showAd();
 
 // Cleanup when page closes

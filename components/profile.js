@@ -11,7 +11,6 @@ let search=document.getElementById("search")
 search.addEventListener("click",()=>{
     window.location.href='http://127.0.0.1:5500/components/serch.html'
 })
-// console.log(userDetails[index],index,renderArr);
 let Nav_items_ul = [
     {
         title: "Home",
@@ -118,9 +117,6 @@ editEducationBtn.addEventListener("click", (e) => {
 </div>`
 });
 let submitEducationForm=document.getElementById("submitEducationForm");
-// submitEducationForm.addEventListener("click",()=>{
-
-// });
 function eduSave(){
     console.log("save");
 }

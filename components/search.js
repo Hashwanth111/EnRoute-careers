@@ -1,4 +1,3 @@
-
 let Nav1ul = document.getElementById("Nav1-ul");
 let dbLIst = document.getElementById("drop-down-list");
 let NavUl = document.getElementById("Nav-ul");

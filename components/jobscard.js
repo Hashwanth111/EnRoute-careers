@@ -319,9 +319,6 @@ function cardclick(id) {
 };
 let savedArr = JSON.parse(localStorage.getItem("savedArr")) || [];
 let savedbtn = JSON.parse(localStorage.getItem("savedbtn")) || [];
-// let bell=document.getElementById("bell");
-// console.log(bell);
-
 function apply(id) {
         if (!appliedArr.includes(id)) {
             appliedArr.push(id);
@@ -346,7 +343,6 @@ function save(id) {
     }
     SaveButtons(); 
 }
-//rendering Saved text!!
 function SaveButtons() {
     savedbtn.forEach(id =>{
         const btn = document.getElementById(id);
@@ -358,7 +354,6 @@ function SaveButtons() {
             }
         });
     }
-//rendering applied text!!
 function applybuttons(){
     appliedbtn.forEach(id =>{
         const btn = document.getElementById(id);

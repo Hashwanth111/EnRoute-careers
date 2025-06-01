@@ -1,5 +1,3 @@
-
-// Your existing JavaScript code remains the same
 let Community = document.getElementById("Community");
 let Continue = document.getElementById("Continue");
 let passwordlabel = document.getElementById("passwordlabel");

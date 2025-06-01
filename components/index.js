@@ -569,7 +569,6 @@ const jobsArr = [
 
 function populateLocationFilter() {
     const locationFilter = document.getElementById('locationFilter');
-    // Get unique locations
     const locations = [...new Set(jobsArr.map(job => job.companyInfo.location))];
     locations.forEach(location => {
         const option = document.createElement('option');
@@ -578,8 +577,6 @@ function populateLocationFilter() {
         locationFilter.appendChild(option);
     });
 }
-
-// Call the function when the page loads
 window.addEventListener('DOMContentLoaded', populateLocationFilter);
 let list = document.getElementById("list");
 let locationFilter = document.getElementById("locationFilter");
@@ -632,8 +629,6 @@ function resetFilters() {
     jobTypeFilter.value = "";
     renderJobs(jobsArr);
 }
-
 renderJobs(jobsArr);
-//rendering profile
 let navimg=document.getElementById("navimg");
 navimg.src=`${renderArr[0].userimage}`;
