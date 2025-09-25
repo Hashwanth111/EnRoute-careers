@@ -8,28 +8,28 @@ let renderArr = [userDetails[index]];
 let navimg = document.getElementById("navimg");
 navimg.src = `${renderArr[0].userimage}`;
 let bell = document.getElementById("bell");
-bell.addEventListener("click", () => { window.location.href = "http://127.0.0.1:5500/components/applied.html" });
+bell.addEventListener("click", () => { window.location.href = "/components/applied.html" });
 let Nav_items_ul = [
     {
         title: "Home",
         icon: "fa-house",
-        href: "http://127.0.0.1:5500/components/feed.html"
+        href: "/components/feed.html"
 
     },
     {
         title: "Network",
         icon: "fa-users",
-        href: "http://127.0.0.1:5500/components/network.html#"
+        href: "/components/network.html#"
     },
     {
         title: "Jobs",
         icon: "fa-suitcase",
-        href: "http://127.0.0.1:5500/components/jobscard.html#"
+        href: "/components/jobscard.html#"
     },
     {
         title: "Filter",
         icon: "fa-filter",
-        href: 'http://127.0.0.1:5500/components/index.html'
+        href: '/components/index.html'
 
     }
 ]
@@ -1111,6 +1111,490 @@ const users = [
         "isPremium": true,
         "isOpenToWork": false,
         "endorsementCount": 31
+    },
+    {
+        "id": "linkedin-101",
+        "name": "Emma Rodriguez",
+        "headline": "Senior Product Designer at Spotify | UX Lead",
+        "profileUrl": "https://www.linkedin.com/in/emmarodriguez",
+        "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 7,
+        "location": "Berlin, Germany",
+        "currentCompany": {
+            "name": "Spotify",
+            "logo": "https://logo.clearbit.com/spotify.com",
+            "url": "https://www.linkedin.com/company/spotify"
+        },
+        "skills": ["Figma", "User Research", "Prototyping"],
+        "lastActive": "Active now",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 38
+    },
+    {
+        "id": "linkedin-102",
+        "name": "David Kim",
+        "headline": "Engineering Manager at Tesla",
+        "profileUrl": "https://www.linkedin.com/in/davidkim",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 4,
+        "location": "Austin, Texas",
+        "currentCompany": {
+            "name": "Tesla",
+            "logo": "https://logo.clearbit.com/tesla.com",
+            "url": "https://www.linkedin.com/company/tesla"
+        },
+        "skills": ["Robotics", "C++", "Machine Learning"],
+        "lastActive": "2 days ago",
+        "isPremium": false,
+        "isOpenToWork": true,
+        "endorsementCount": 52
+    },
+    {
+        "id": "linkedin-103",
+        "name": "Aisha Mohammed",
+        "headline": "VP of Sales at Stripe",
+        "profileUrl": "https://www.linkedin.com/in/aishamohammed",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 1,
+        "location": "Dubai, UAE",
+        "currentCompany": {
+            "name": "Stripe",
+            "logo": "https://logo.clearbit.com/stripe.com",
+            "url": "https://www.linkedin.com/company/stripe"
+        },
+        "skills": ["Enterprise Sales", "Negotiation"],
+        "lastActive": "1 week ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 29
+    },
+    {
+        "id": "linkedin-104",
+        "name": "James Wilson",
+        "headline": "Lead Data Scientist at Netflix",
+        "profileUrl": "https://www.linkedin.com/in/jameswilson",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 9,
+        "location": "Los Gatos, California",
+        "currentCompany": {
+            "name": "Netflix",
+            "logo": "https://logo.clearbit.com/netflix.com",
+            "url": "https://www.linkedin.com/company/netflix"
+        },
+        "skills": ["Python", "TensorFlow"],
+        "lastActive": "Active 1h ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 63
+    },
+    {
+        "id": "linkedin-105",
+        "name": "Sophie Chen",
+        "headline": "VP of Engineering at Slack",
+        "profileUrl": "https://www.linkedin.com/in/sophiechen",
+        "avatar": "https://randomuser.me/api/portraits/women/45.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 6,
+        "location": "San Francisco, California",
+        "currentCompany": {
+            "name": "Slack",
+            "logo": "https://logo.clearbit.com/slack.com",
+            "url": "https://www.linkedin.com/company/slack"
+        },
+        "skills": ["Distributed Systems", "Scalability"],
+        "lastActive": "Yesterday",
+        "isPremium": false,
+        "isOpenToWork": false,
+        "endorsementCount": 47
+    },
+    // Continuing with 15 more unique profiles...
+    {
+        "id": "linkedin-120",
+        "name": "Carlos Mendez",
+        "headline": "CTO at Startup",
+        "profileUrl": "https://www.linkedin.com/in/carlosmendez",
+        "avatar": "https://randomuser.me/api/portraits/men/88.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 2,
+        "location": "Barcelona, Spain",
+        "currentCompany": {
+            "name": "NextGen AI",
+            "logo": "https://logo.clearbit.com/nextgenai.com",
+            "url": "https://www.linkedin.com/company/nextgenai"
+        },
+        "skills": ["Startups", "Fundraising"],
+        "lastActive": "3 weeks ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 31
+    },
+    {
+        "id": "linkedin-101",
+        "name": "Emma Rodriguez",
+        "headline": "Senior Product Designer at Spotify | UX Lead",
+        "profileUrl": "https://www.linkedin.com/in/emmarodriguez",
+        "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 7,
+        "location": "Berlin, Germany",
+        "currentCompany": {
+            "name": "Spotify",
+            "logo": "https://logo.clearbit.com/spotify.com",
+            "url": "https://www.linkedin.com/company/spotify"
+        },
+        "skills": ["Figma", "User Research", "Prototyping"],
+        "lastActive": "Active now",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 38
+    },
+    {
+        "id": "linkedin-102",
+        "name": "David Kim",
+        "headline": "Engineering Manager at Tesla",
+        "profileUrl": "https://www.linkedin.com/in/davidkim",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 4,
+        "location": "Austin, Texas",
+        "currentCompany": {
+            "name": "Tesla",
+            "logo": "https://logo.clearbit.com/tesla.com",
+            "url": "https://www.linkedin.com/company/tesla"
+        },
+        "skills": ["Robotics", "C++", "Machine Learning"],
+        "lastActive": "2 days ago",
+        "isPremium": false,
+        "isOpenToWork": true,
+        "endorsementCount": 52
+    },
+    {
+        "id": "linkedin-103",
+        "name": "Aisha Mohammed",
+        "headline": "VP of Sales at Stripe",
+        "profileUrl": "https://www.linkedin.com/in/aishamohammed",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 1,
+        "location": "Dubai, UAE",
+        "currentCompany": {
+            "name": "Stripe",
+            "logo": "https://logo.clearbit.com/stripe.com",
+            "url": "https://www.linkedin.com/company/stripe"
+        },
+        "skills": ["Enterprise Sales", "Negotiation"],
+        "lastActive": "1 week ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 29
+    },
+    {
+        "id": "linkedin-104",
+        "name": "James Wilson",
+        "headline": "Lead Data Scientist at Netflix",
+        "profileUrl": "https://www.linkedin.com/in/jameswilson",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 9,
+        "location": "Los Gatos, California",
+        "currentCompany": {
+            "name": "Netflix",
+            "logo": "https://logo.clearbit.com/netflix.com",
+            "url": "https://www.linkedin.com/company/netflix"
+        },
+        "skills": ["Python", "TensorFlow"],
+        "lastActive": "Active 1h ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 63
+    },
+    {
+        "id": "linkedin-105",
+        "name": "Sophie Chen",
+        "headline": "VP of Engineering at Slack",
+        "profileUrl": "https://www.linkedin.com/in/sophiechen",
+        "avatar": "https://randomuser.me/api/portraits/women/45.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 6,
+        "location": "San Francisco, California",
+        "currentCompany": {
+            "name": "Slack",
+            "logo": "https://logo.clearbit.com/slack.com",
+            "url": "https://www.linkedin.com/company/slack"
+        },
+        "skills": ["Distributed Systems", "Scalability"],
+        "lastActive": "Yesterday",
+        "isPremium": false,
+        "isOpenToWork": false,
+        "endorsementCount": 47
+    },
+    // Continuing with 15 more unique profiles...
+    {
+        "id": "linkedin-120",
+        "name": "Carlos Mendez",
+        "headline": "CTO at Startup",
+        "profileUrl": "https://www.linkedin.com/in/carlosmendez",
+        "avatar": "https://randomuser.me/api/portraits/men/88.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 2,
+        "location": "Barcelona, Spain",
+        "currentCompany": {
+            "name": "NextGen AI",
+            "logo": "https://logo.clearbit.com/nextgenai.com",
+            "url": "https://www.linkedin.com/company/nextgenai"
+        },
+        "skills": ["Startups", "Fundraising"],
+        "lastActive": "3 weeks ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 31
+    },
+    {
+        "id": "linkedin-101",
+        "name": "Emma Rodriguez",
+        "headline": "Senior Product Designer at Spotify | UX Lead",
+        "profileUrl": "https://www.linkedin.com/in/emmarodriguez",
+        "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 7,
+        "location": "Berlin, Germany",
+        "currentCompany": {
+            "name": "Spotify",
+            "logo": "https://logo.clearbit.com/spotify.com",
+            "url": "https://www.linkedin.com/company/spotify"
+        },
+        "skills": ["Figma", "User Research", "Prototyping"],
+        "lastActive": "Active now",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 38
+    },
+    {
+        "id": "linkedin-102",
+        "name": "David Kim",
+        "headline": "Engineering Manager at Tesla",
+        "profileUrl": "https://www.linkedin.com/in/davidkim",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 4,
+        "location": "Austin, Texas",
+        "currentCompany": {
+            "name": "Tesla",
+            "logo": "https://logo.clearbit.com/tesla.com",
+            "url": "https://www.linkedin.com/company/tesla"
+        },
+        "skills": ["Robotics", "C++", "Machine Learning"],
+        "lastActive": "2 days ago",
+        "isPremium": false,
+        "isOpenToWork": true,
+        "endorsementCount": 52
+    },
+    {
+        "id": "linkedin-103",
+        "name": "Aisha Mohammed",
+        "headline": "VP of Sales at Stripe",
+        "profileUrl": "https://www.linkedin.com/in/aishamohammed",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 1,
+        "location": "Dubai, UAE",
+        "currentCompany": {
+            "name": "Stripe",
+            "logo": "https://logo.clearbit.com/stripe.com",
+            "url": "https://www.linkedin.com/company/stripe"
+        },
+        "skills": ["Enterprise Sales", "Negotiation"],
+        "lastActive": "1 week ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 29
+    },
+    {
+        "id": "linkedin-104",
+        "name": "James Wilson",
+        "headline": "Lead Data Scientist at Netflix",
+        "profileUrl": "https://www.linkedin.com/in/jameswilson",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 9,
+        "location": "Los Gatos, California",
+        "currentCompany": {
+            "name": "Netflix",
+            "logo": "https://logo.clearbit.com/netflix.com",
+            "url": "https://www.linkedin.com/company/netflix"
+        },
+        "skills": ["Python", "TensorFlow"],
+        "lastActive": "Active 1h ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 63
+    },
+    {
+        "id": "linkedin-105",
+        "name": "Sophie Chen",
+        "headline": "VP of Engineering at Slack",
+        "profileUrl": "https://www.linkedin.com/in/sophiechen",
+        "avatar": "https://randomuser.me/api/portraits/women/45.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 6,
+        "location": "San Francisco, California",
+        "currentCompany": {
+            "name": "Slack",
+            "logo": "https://logo.clearbit.com/slack.com",
+            "url": "https://www.linkedin.com/company/slack"
+        },
+        "skills": ["Distributed Systems", "Scalability"],
+        "lastActive": "Yesterday",
+        "isPremium": false,
+        "isOpenToWork": false,
+        "endorsementCount": 47
+    },
+    // Continuing with 15 more unique profiles...
+    {
+        "id": "linkedin-120",
+        "name": "Carlos Mendez",
+        "headline": "CTO at Startup",
+        "profileUrl": "https://www.linkedin.com/in/carlosmendez",
+        "avatar": "https://randomuser.me/api/portraits/men/88.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 2,
+        "location": "Barcelona, Spain",
+        "currentCompany": {
+            "name": "NextGen AI",
+            "logo": "https://logo.clearbit.com/nextgenai.com",
+            "url": "https://www.linkedin.com/company/nextgenai"
+        },
+        "skills": ["Startups", "Fundraising"],
+        "lastActive": "3 weeks ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 31
+    },
+    {
+        "id": "linkedin-101",
+        "name": "Emma Rodriguez",
+        "headline": "Senior Product Designer at Spotify | UX Lead",
+        "profileUrl": "https://www.linkedin.com/in/emmarodriguez",
+        "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 7,
+        "location": "Berlin, Germany",
+        "currentCompany": {
+            "name": "Spotify",
+            "logo": "https://logo.clearbit.com/spotify.com",
+            "url": "https://www.linkedin.com/company/spotify"
+        },
+        "skills": ["Figma", "User Research", "Prototyping"],
+        "lastActive": "Active now",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 38
+    },
+    {
+        "id": "linkedin-102",
+        "name": "David Kim",
+        "headline": "Engineering Manager at Tesla",
+        "profileUrl": "https://www.linkedin.com/in/davidkim",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 4,
+        "location": "Austin, Texas",
+        "currentCompany": {
+            "name": "Tesla",
+            "logo": "https://logo.clearbit.com/tesla.com",
+            "url": "https://www.linkedin.com/company/tesla"
+        },
+        "skills": ["Robotics", "C++", "Machine Learning"],
+        "lastActive": "2 days ago",
+        "isPremium": false,
+        "isOpenToWork": true,
+        "endorsementCount": 52
+    },
+    {
+        "id": "linkedin-103",
+        "name": "Aisha Mohammed",
+        "headline": "VP of Sales at Stripe",
+        "profileUrl": "https://www.linkedin.com/in/aishamohammed",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 1,
+        "location": "Dubai, UAE",
+        "currentCompany": {
+            "name": "Stripe",
+            "logo": "https://logo.clearbit.com/stripe.com",
+            "url": "https://www.linkedin.com/company/stripe"
+        },
+        "skills": ["Enterprise Sales", "Negotiation"],
+        "lastActive": "1 week ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 29
+    },
+    {
+        "id": "linkedin-104",
+        "name": "James Wilson",
+        "headline": "Lead Data Scientist at Netflix",
+        "profileUrl": "https://www.linkedin.com/in/jameswilson",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+        "connectionDegree": "1st",
+        "mutualConnections": 9,
+        "location": "Los Gatos, California",
+        "currentCompany": {
+            "name": "Netflix",
+            "logo": "https://logo.clearbit.com/netflix.com",
+            "url": "https://www.linkedin.com/company/netflix"
+        },
+        "skills": ["Python", "TensorFlow"],
+        "lastActive": "Active 1h ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 63
+    },
+    {
+        "id": "linkedin-105",
+        "name": "Sophie Chen",
+        "headline": "VP of Engineering at Slack",
+        "profileUrl": "https://www.linkedin.com/in/sophiechen",
+        "avatar": "https://randomuser.me/api/portraits/women/45.jpg",
+        "connectionDegree": "2nd",
+        "mutualConnections": 6,
+        "location": "San Francisco, California",
+        "currentCompany": {
+            "name": "Slack",
+            "logo": "https://logo.clearbit.com/slack.com",
+            "url": "https://www.linkedin.com/company/slack"
+        },
+        "skills": ["Distributed Systems", "Scalability"],
+        "lastActive": "Yesterday",
+        "isPremium": false,
+        "isOpenToWork": false,
+        "endorsementCount": 47
+    },
+    // Continuing with 15 more unique profiles...
+    {
+        "id": "linkedin-120",
+        "name": "Carlos Mendez",
+        "headline": "CTO at Startup",
+        "profileUrl": "https://www.linkedin.com/in/carlosmendez",
+        "avatar": "https://randomuser.me/api/portraits/men/88.jpg",
+        "connectionDegree": "3rd",
+        "mutualConnections": 2,
+        "location": "Barcelona, Spain",
+        "currentCompany": {
+            "name": "NextGen AI",
+            "logo": "https://logo.clearbit.com/nextgenai.com",
+            "url": "https://www.linkedin.com/company/nextgenai"
+        },
+        "skills": ["Startups", "Fundraising"],
+        "lastActive": "3 weeks ago",
+        "isPremium": true,
+        "isOpenToWork": false,
+        "endorsementCount": 31
     }
 ];
 let mainSearchInput = document.getElementById("mainSearchInput");
@@ -1266,17 +1750,3 @@ function user(arr, div) {
             joblistingul.style.gap = "30px"
     });
 }
-// function typesearch() {
-//     mainSearchInput.addEventListener("input", (e) => {
-//         console.log(e.target.value);
-//         joblistingul.innerHTML = "";
-//         let text = e.target.value.toLowerCase().trim();
-//         let suggested = users.filter((ele) => ele.name.toLowerCase().match(text));
-//         suggested.forEach((e) => {
-//             li = document.createElement("li");
-//             li.innerHTML = e.title;
-//             joblistingul.appendChild(li);
-//         });;
-//     });
-// }
-//  

@@ -33,11 +33,9 @@ function previewImage(input) {
 }
 
 let userDetails = JSON.parse(localStorage.getItem("userDetails")) || [];
-
 async function saveChanges() {
     const imageFile = userimage.files[0];
     let imageBase64 = "";
-
     if (imageFile) {
         imageBase64 = await convertToBase64(imageFile);
     }
@@ -52,7 +50,6 @@ async function saveChanges() {
         phone: phone.value.trim(),
         userimage: imageBase64
     };
-
     const existingIndex = userDetails.findIndex(u => u.id === user.id);
     if (existingIndex >= 0) {
         userDetails[existingIndex] = user;
@@ -61,7 +58,7 @@ async function saveChanges() {
     }
 
     localStorage.setItem("userDetails", JSON.stringify(userDetails));
-    window.location.href = "../components/feed.html";
+    window.location.href = "./feed.html";
 }
 
 function convertToBase64(file) {

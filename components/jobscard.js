@@ -1,4 +1,3 @@
-
 const jobsArr = [
     {
         "id": 0,
@@ -373,29 +372,29 @@ let tempArr=JSON.parse(localStorage.getItem("tempArr")) || [];
 let Profileimage=document.getElementById("Profileimage");
 let search=document.getElementById("search")
 search.addEventListener("click",()=>{
-    window.location.href='http://127.0.0.1:5500/components/serch.html'
+    window.location.href='/components/serch.html'
 })
 let Nav_items_ul = [
     {
         title: "Home",
         icon: "fa-house",
-        href: "http://127.0.0.1:5500/components/feed.html"
+        href: "/components/feed.html"
 
     },
     {
         title: "Network",
         icon: "fa-users",
-        href: "http://127.0.0.1:5500/components/network.html#"
+        href: "/components/network.html#"
     },
     {
         title: "Jobs",
         icon: "fa-suitcase",
-        href: "http://127.0.0.1:5500/components/jobscard.html#"
+        href: "/components/jobscard.html#"
     },
     {
         title: "Filter",
         icon: "fa-filter",
-        href:'http://127.0.0.1:5500/components/index.html'
+        href:'/components/index.html'
         
     }
 ]
@@ -409,7 +408,7 @@ Nav_items_ul.map((i) => {
                         </a>
                     </li>`
 });
-if(window.location.href=='http://127.0.0.1:5500/components/jobscard.html#')
+if(window.location.href=='/components/jobscard.html#')
 {
     document.getElementById("Jobs").style.borderBottom="5px solid black";
     document.getElementById("Jobs").style.color="black";

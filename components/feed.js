@@ -6,29 +6,29 @@ let tempArr = JSON.parse(localStorage.getItem("tempArr"));
 let Profileimage = document.getElementById("Profileimage");
 let search = document.getElementById("search")
 search.addEventListener("click", () => {
-    window.location.href = 'http://127.0.0.1:5500/components/serch.html'
+    window.location.href = "./serch.html"
 })
 let Nav_items_ul = [
     {
         title: "Home",
         icon: "fa-house",
-        href: "http://127.0.0.1:5500/components/feed.html"
+        href: "./feed.html"
 
     },
     {
         title: "Network",
         icon: "fa-users",
-        href: "http://127.0.0.1:5500/components/network.html#"
+        href: "./network.html"
     },
     {
         title: "Jobs",
         icon: "fa-suitcase",
-        href: "http://127.0.0.1:5500/components/jobscard.html#"
+        href: "./jobscard.html"
     },
     {
         title: "Filter",
         icon: "fa-filter",
-        href: 'http://127.0.0.1:5500/components/index.html'
+        href: './index.html'
 
     }
 ]
@@ -42,7 +42,7 @@ Nav_items_ul.map((i) => {
                         </a>
                     </li>`
 });
-if (window.location.href == "http://127.0.0.1:5500/components/feed.html") {
+if (window.location.href.includes('/components/feed.html') || window.location.pathname.endsWith('/components/feed.html')) {
     document.getElementById("Home").style.borderBottom = "5px solid black";
     document.getElementById("Home").style.color = "black";
 }

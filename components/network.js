@@ -9,29 +9,29 @@ let matching=document.getElementById("matching");
 let id=tempArr[0].id;
 
 search.addEventListener("click",()=>{
-    window.location.href='http://127.0.0.1:5500/components/serch.html'
+    window.location.href='/components/serch.html'
 })
 let Nav_items_ul = [
     {
         title: "Home",
         icon: "fa-house",
-        href: "http://127.0.0.1:5500/components/feed.html"
+        href: "/components/feed.html"
 
     },
     {
         title: "Network",
         icon: "fa-users",
-        href: "http://127.0.0.1:5500/components/network.html#"
+        href: "/components/network.html#"
     },
     {
         title: "Jobs",
         icon: "fa-suitcase",
-        href: "http://127.0.0.1:5500/components/jobscard.html#"
+        href: "/components/jobscard.html#"
     },
     {
         title: "Filter",
         icon: "fa-filter",
-        href:'http://127.0.0.1:5500/components/index.html'
+        href: '/components/index.html'
         
     }
 ]
@@ -45,7 +45,7 @@ Nav_items_ul.map((i) => {
                         </a>
                     </li>`
 });
-if(window.location.href=="http://127.0.0.1:5500/components/network.html#")
+if(window.location.href=="/components/network.html#")
 {
     document.getElementById("Network").style.borderBottom="5px solid black";
     document.getElementById("Network").style.color="black";
@@ -714,6 +714,8 @@ function prev(){
   networkdiv.innerHTML = "";
   user(req,networkdiv);
 }
+
+
 let a = users.slice(0, 4);
 user(a,networkdiv);
 function matcingskill(){
